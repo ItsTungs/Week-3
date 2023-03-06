@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Konversi Nilai Angka ke Nilai Huruf</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <h1>Konversi Nilai Angka ke Nilai Huruf</h1>
+
+    <div>
+        <input type="number" id="nilai" placeholder="Masukkan nilai angka">
+        <button onclick="konversi()">Konversi</button>
+    </div>
+
+    <div>
+        <input type="text" id="hasil" placeholder="Hasil konversi">
+    </div>
+
+    <script>
+        function konversi() {
+            var nilai = parseFloat(document.getElementById("nilai").value);
+            var hasil = "";
+
+            if (nilai >= 81 && nilai <= 100) {
+                hasil = "A";
+            } else if (nilai >= 71 && nilai <= 80) {
+                hasil = "AB";
+            } else if (nilai >= 66 && nilai <= 70) {
+                hasil = "B";
+            } else if (nilai >= 61 && nilai <= 65) {
+                hasil = "BC";
+            } else if (nilai >= 56 && nilai <= 60) {
+                hasil = "C";
+            } else if (nilai >= 41 && nilai <= 55) {
+                hasil = "D";
+            } else if (nilai >= 0 && nilai <= 40) {
+                hasil = "E";
+            } else {
+                hasil = "Nilai tidak valid";
+            }
+
+            document.getElementById("hasil").value = hasil;
+        }
+    </script>
+</body>
+
+</html>
